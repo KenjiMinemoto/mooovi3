@@ -684,3 +684,82 @@ Started GET "/" for 127.0.0.1 at 2014-11-01 22:32:03 +0900
 Processing by TopController#index as HTML
   Rendered top/index.html.erb within layouts/review_site (0.0ms)
 Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'mooovi_development'
+  AND fk.table_name = 'products'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `products`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'mooovi_development'
+  AND fk.table_name = 'reviews'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `reviews`[0m
+  [1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'mooovi_development'
+  AND fk.table_name = 'users'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `users`[0m
+  [1m[36m (14.4ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (21.0ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+
+Started GET "/" for ::1 at 2017-01-18 17:48:27 +0900
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/review_site (1.0ms)
+Completed 200 OK in 2361ms (Views: 2353.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-18 17:48:29 +0900
+Processing by ProductsController#index as HTML
+  Rendered products/index.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2017-01-18 17:48:29 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2017-01-18 17:48:29 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2017-01-18 17:48:29 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2017-01-18 17:48:29 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2017-01-18 17:48:29 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2017-01-18 17:48:29 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2017-01-18 17:48:29 +0900
+
+
+Started GET "/assets/ranking.js?body=1" for ::1 at 2017-01-18 17:48:29 +0900
+
+
+Started GET "/assets/reviews.js?body=1" for ::1 at 2017-01-18 17:48:29 +0900
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2017-01-18 17:48:29 +0900
+
+
+Started GET "/assets/bambi-1.0.0.ttf?20140712" for ::1 at 2017-01-18 17:48:29 +0900
