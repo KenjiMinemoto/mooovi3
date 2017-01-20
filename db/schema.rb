@@ -11,13 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170119084254) do
+ActiveRecord::Schema.define(version: 20170120014400) do
 
   create_table "products", force: :cascade do |t|
     t.string   "title",      limit: 255
     t.text     "image_url",  limit: 65535
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.string   "director",   limit: 255
+    t.text     "detail",     limit: 65535
+    t.integer  "open_date",  limit: 4
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string   "nickname",   limit: 255
+    t.integer  "rate",       limit: 4
+    t.text     "review",     limit: 65535
+    t.integer  "product_id", limit: 4
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
